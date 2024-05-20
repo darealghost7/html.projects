@@ -4,53 +4,62 @@
 <title>Student feedback</title>
 </head>
 <body>
-<form action="action page_php" method="post">
+<form action="action_page.php" method="post">
 <fieldset>
-
+<fieldset>
+ <legend>Personal Information</legend>
 <div>
-<label for="FName"> First Name:</label>
-<input type="text" id="FName" name="FName" placeholder="enter your name">
+<label for="FName">First Name:</label>
+<input type="text" id="FName" name="FName" placeholder="Enter your name">
 </div>
 <br></br>
 <div>
-<label for="email">email:</label>
-<input type="email" id="email" name="email" placeholder="darealgh@gmail.com">
+<label for="email">Email:</label>
+<input type="email" id="email" name="email" placeholder="example@example.com">
 </div>
+</fieldset>
+<br></br>
+<fieldset>
+<legend>Feedback Options</legend>
+<div>
+<label>Campus:</label>
+<input type="checkbox" id="campus" name="campus" value="campus">
+<label>Students:</label>
+<input type="checkbox" id="students" name="students" value="students">
+<label>Location:</label>
+<input type="checkbox" id="location" name="location" value="location">
+<label>Atmosphere:</label>
+<input type="checkbox" id="atmosphere" name="atmosphere" value="atmosphere">
+<label>Dorm:</label>
+<input type="checkbox" id="dorm" name="dorm" value="dorm">
+<label>Room:</label>
+<input type="checkbox" id="room" name="room" value="room">
+<label>Sport:</label>
+<input type="checkbox" id="sport" name="sport" value="sport">
+</div>
+</fieldset>
+<br></br>
+ <fieldset>
+ <legend>Feedback Rating</legend>
+<div>
+<label>Friend:</label>
+<input type="radio" id="friend" name="friend" value="friend">
+<label>Television:</label>
+<input type="radio" id="television" name="friend" value="television">
+<label>Internet:</label>
+<input type="radio" id="internet" name="friend" value="internet">
+</div>
+</fieldset>
 <br></br>
 <div>
-<label for="campus">campus:</label>
-<input type="checkbox" id="campus" name="campus" >
-<label for="friend">Students:</label>
-<input type="checkbox" id="Students" name="Students" >
-<label for="location">location:</label>
-<input type="checkbox" id="location" name="location" >
-<label for="atmosphere">atmosphere:</label>
-<input type="checkbox" id="atmosphere" name="atmosphere" >
-<label for="dorm">dorm:</label>
-<input type="checkbox" id="dorm" name="dorm" >
-<label for="room">room:</label>
-<input type="checkbox" id="room" name="room" >
-<label for="sport">sport:</label>
-<input type="checkbox" id="sport" name="sport" >
-</div>
-<br></br>
-<div>
-<label for="friend">friend:</label>
-<input type="radio" id="name" name="friend" value="name">
-<label for="Television">Television:</label>
-<input type="radio" id="name" name="Television" value="name">
-<label for="friend">Internet:</label>
-<input type="radio" id="name" name="Internet" value="name">
-</div>
-<br></br>
-<div>
-<textarea name="commet" form="usrform">Enter text here...</textarea>
+<textarea name="comment" form="usrform" placeholder="Enter your feedback here..."></textarea>
 </div>
 <br></br>
 <div>
 <input type="submit">
 <br></br>
 <input type="reset">
+</fieldset>
 </form>
 </body>
-</html> 
+</html>
