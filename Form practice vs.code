@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="form.css"><!--external styling-->
+</head>
+<body>
+    <div class="container">
+    <form method="post">
+<label for="name">Name:</label>
+<input type="text" id="name" placeholder="Write your name " required><br>
+
+<label for="username">Username:</label>
+<input type="text" id="username" placeholder="dareal"required><br>
+
+<label for="email">Email:</label>
+<input type="email" id="username" placeholder="dareal@"required><br>
+
+<label for="password">password:</label>
+<input type="password" id="password" required><br>
+
+
+<input type="submit"><br>
+<input type="reset">
+
+    </form>
+    </div>
+    
+</body>
+</html>
+
+
+body{
+    background-color: bisque;
+}
+.container{width: 50%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: aliceblue;
+    border-radius: 10px;} /*from gpt*/
+    
+    form {
+        width: 300px;
+        padding: 20px;
+        border: 2px solid #ccc;
+        border-radius: 8px;
+        transition: background-color 0.3s ease, box-shadow 0.3s ease;
+      }
+      
+      /* Hover effect for the form */
+      form:hover {
+        background-color: #2383a0;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
