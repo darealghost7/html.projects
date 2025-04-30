@@ -1,0 +1,161 @@
+/* General Reset and Styling */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+}
+
+/* Header Styles */
+.container {
+    background-color: #000;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.linknav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    font-weight: bold;
+    
+}
+
+.linknav a:hover {
+    background-color: rgba(169, 192, 192, 0.6);
+    border-radius: 5px;
+}
+
+/* Main Section */
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 30px;
+    background-color: #fff;
+    text-align: center;
+}
+
+.productinfo {
+    max-width: 500px;
+}
+
+.productimage {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    margin: 20px 0;
+}
+
+.buybutton {
+    padding: 10px 20px;
+    background-color: #007b5e;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.buybutton:hover {
+    background-color: #005f47;
+}
+
+.pricedisplay {
+    margin: 10px 0;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #000;
+    color: white;
+    padding: 50px 300px;
+    text-align: center;
+}
+
+.contactformwrapp {
+    display: flex;
+    justify-content: center;
+}
+
+.contactform {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 400px;
+    width: 100%;
+}
+
+.contactform input,
+.contactform textarea {
+    padding: 10px;
+    border: none;
+    border-radius: 6px;
+    width: 100%;
+}
+
+.contactform button {
+    background-color: #007b5e4a;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.contactform button:hover {
+    background-color: #005f47;
+}
+
+
+
+.close { float: right; cursor: pointer; }
+
+.buybutton{padding: 10px 20px;
+    background-color: #007b5e;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 10px;
+
+}
+.buybutton:hover {
+    background-color:#005f47;
+}
+
+
+/*modal in the main section*/
+.modal{
+    display:none; /* keeps it hidden */
+    position: relative; /* keeps it in place */
+    z-index: 500; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /*allows you to scroll if needed */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+  
+}
+.modalcont {
+    background-color: #12141330;
+    color: white;
+    padding: 10px;
+    justify-content: center;
+    text-align: center;
+    width: 300px;
+    max-width: 100cm;
+    border-radius: 8px;
+
+  
+}
+
+.productimage{
+    padding: 5px 3px;
+    height: 5cm;
+}

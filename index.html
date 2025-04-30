@@ -3,35 +3,117 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Product page</title>
+    <title>EcoSmart Water Bottle</title>
+    <link rel="stylesheet" href="form.css">
 </head>
 <body>
+    <!-- Header Section -->
     <header>
-        <nav><!--headers with nav-->
-            <ul>
-                <li><a href="">Home</a></li>
-                <li><a href="">Features</a></li>
-                <li><a href="">Pricing</a></li>
-                <li><a href="">Contact us</a></li>
-            </ul>
-        </nav>
+        <div class="container">
+            <nav class="linknav">
+                <a href="#" class="nb">Home</a>
+                <a href="#" class="nb">Features</a>
+                <a href="#" class="nb">Pricing</a>
+                <a href="#" class="nb">Contact Us</a>
+            </nav>
+        </div>
     </header>
- <!--Main section-->
- <section id="product">
- <div>
-    <img src="">
- </div>
 
- <div>
-    <button onclick="openModal()">Buy now</button>
- </div>
- 
- </section>
-
+    <!-- Main Product Section -->
+    <section class="main">
+        <div class="productinfo">
+            <h1>EcoSmart Water Bottle</h1>
+            <img src="eco.jpeg" alt="EcoSmart Water Bottle" class="productimage">
+            <div class="pricedisplay">Total Price: <span id="modalprice">R150</span> </div>
+            <button class="buybutton" id="buynowbtn" onclick="openModale()">Buy Now</button>
+        </div>
+    </section>
 
 
+     <!--where my modal starts-->
+    <div class="modal" id="buyModal">
+        <div class="modalcont">
+          <h3>Choose Your Options</h3>
+          <form   onclick="">
+             <label for="color" onchange="updateprice()">Color:</label>
+             <select id="colorSelect">
+               <option value="1">grey</option>
+               <option value="2">Green (+R20)</option>
+               <option value="3">Black (+R30)</option>
+              </select>
+             <label>
+               <input type="checkbox" id="engraving" onchange="updateprice()"> Custom Engraving (+R5)
+               </label>
+
+               <label>
+              <input type="checkbox" id="packaging" onchange="updateprice()"> Gift Packaging (+R8)
+              </label>
+      
+             <button class="buybutton" onclick="closeModale()">Confirm Purchase</button>
+            </form>
+            
+        </div>
+   
+     </div>
+           
+            
+
+    <!-- Footer Contact Form -->
+ <footer>
+        <div class="contactformwrapp">
+            <form action="#" class="contactform">
+                <h3>Contact Us</h3>
+
+                <input type="text" placeholder="Your name" id="name" name="name" required>
+                <input type="email" placeholder="dareal@gmail.com" id="email" name="email" required>
+                <textarea placeholder="Enter your message" id="message" name="message" required rows="4"></textarea>
+
+                <label for="check">
+                    <input type="checkbox" id="check" required>
+                    I agree to the <a href="">Terms and Conditions</a>
+                </label>
+
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </footer>
+    
+    <!--This is my Java script-->
+    <script >
+   let startPrice = 150;
+
+ const colorSelect = document.getElementById("colorSelect"); /* adding a const to my check box and drop down menu*/
+ const engravingCheckbox = document.getElementById("engraving");
+  const packagingCheckbox = document.getElementById("packaging");
+
+   function updateprice() {
+  let newPrice = startPrice;
+  const colorValue = Number(colorSelect.value);
+/* adding all the value to the newprice or update price*/
+  if (colorValue === 2) newPrice += 20;
+  else if (colorValue === 3) newPrice += 30;
+
+  if (engravingCheckbox.checked) newPrice += 5;
+  if (packagingCheckbox.checked) newPrice += 8;
+
+  document.getElementById("modalprice").innerText = "R" + newPrice;
+}
+/* open my modal*/
+ function openModale() {
+  document.getElementById("buyModal").style.display = "flex";
+  updateprice();
+}
+/* close my modal*/
+ function closeModale() {
+  document.getElementById("buyModal").style.display = "none";
+}
+/*update the newprice*/
+  colorSelect.addEventListener("change", updateprice); 
+ engravingCheckbox.addEventListener("change", updateprice);
+  packagingCheckbox.addEventListener("change", updateprice);
 
 
 
+    </script>
 </body>
 </html>
