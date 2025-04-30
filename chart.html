@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+<body>
+
+<canvas id="theChart" style="width:100%;max-width:600px"></canvas>
+
+<script>
+const xValues = ["dad party", "cccc partry", "mcd party", "ppp party"];
+const yValues = [45, 27, 23, 5];
+const sectorColors = [
+  "red",
+  "green",
+  "blue",
+  "lightgreen",
+  
+];
+
+new Chart("theChart", {
+  type: "pie",
+  data: {
+    labels: xValues,
+    datasets: [{
+      backgroundColor: sectorColors,
+      data: yValues
+    }]
+  },
+  options: {
+    title: {
+      display: true,
+      text: "2025 Election"
+    }
+  }
+});
+</script>
+
+</body>
+</html>
